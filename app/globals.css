@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.pop-up {
+    transform: scale(0);
+    animation: animation-pop-up 0.5s forwards;
+}
+
+@keyframes animation-pop-up {
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.up-down {
+    transform: translateY(-100%);
+    animation: animation-up-down 0.5s 0.4s forwards;
+}
+
+@keyframes animation-up-down {
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}

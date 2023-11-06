@@ -17,18 +17,26 @@ export default function Todos({user}:Props) {
 
     const [Load, setLoad] = useState(false);
 
+    const compareCreatedAt = (a:any, b:any) => {
+        const dateA:any = DateTime.fromMillis(a.todo.createdAt.toMillis());
+        const dateB:any = DateTime.fromMillis(b.todo.createdAt.toMillis());
+        return dateA - dateB;
+    };
+
     useEffect(() => {
         if(user) {
             setLoad(true);
             const q = query(collection(db,user.uid));
+            
             const unsubscribe = onSnapshot(q , (QuerySnapshot) => {    
-            let Todos:todoItem[] = [];
-            QuerySnapshot.forEach((doc) => {
-            Todos.push({...doc.data() as todoItem , id:doc.id})
+                let Todos:todoItem[] = [];
+                QuerySnapshot.forEach((doc) => {
+                    Todos.push({...doc.data() as todoItem , id:doc.id})
+                })
+                Todos.sort(compareCreatedAt);
+                setLoad(false);
+                setTodoItems(Todos);
             })
-            setLoad(false);
-            setTodoItems(Todos);
-        })
             return () => {
                 unsubscribe();
             }

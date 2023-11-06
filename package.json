@@ -11,13 +11,17 @@
   "dependencies": {
     "encoding": "^0.1.13",
     "firebase": "^10.5.2",
+    "luxon": "^3.4.3",
     "next": "14.0.1",
     "react": "^18",
     "react-dom": "^18",
+    "react-hook-form": "^7.48.2",
     "react-icons": "^4.11.0",
-    "react-loader-spinner": "^5.4.5"
+    "react-loader-spinner": "^5.4.5",
+    "react-loading-skeleton": "^3.3.1"
   },
   "devDependencies": {
+    "@types/luxon": "^3.3.3",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

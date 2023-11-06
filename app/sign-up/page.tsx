@@ -36,8 +36,8 @@ export default function page() {
   
 
   return (
-    <main className="w-full text-stone-800 h-screen flex justify-center items-center">
-        <div className="sm:w-1/2 relative xl:w-1/3 p-5 bg-white sm:drop-shadow-xl rounded">
+    <main className="w-full relative text-stone-800 h-screen flex justify-center items-center">
+        <div className="sm:w-1/2 sm:relative xl:w-1/3 p-5 bg-white sm:drop-shadow-xl rounded">
             <div className="w-[70%] sm:w-1/2 mx-auto mb-10">
                 <Image src={logo} alt="logo" priority={true} />
             </div>

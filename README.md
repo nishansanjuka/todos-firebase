@@ -9,7 +9,7 @@
 
 # Description:
 
-SimpleToDo is a user-friendly web application built using Next.js that aims to streamline task management with style and simplicity. With Google Authentication powered by Firebase Auth, users can effortlessly sign in and dive into a seamless task management experience.
+TodoApp is a user-friendly web application built using Next.js that aims to streamline task management with style and simplicity. With Google Authentication powered by Firebase Auth, users can effortlessly sign in and dive into a seamless task management experience.
 
 ### Key Features:
 

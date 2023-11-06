@@ -28,7 +28,7 @@ export default function NavMenu() {
     
     if(user) {
         return (
-            <div className="w-full up-down p-3 bg-white border-b fixed flex items-center">
+            <div className="w-full z-10 up-down p-3 bg-white border-b fixed flex items-center top-0 left-0">
                 <h1 className="font-semibold underline flex-1 text-3xl">Todo App</h1>
                 <div className="mr-3 flex sm:items-center space-x-8 flex-col sm:flex-row items-end">
                     <div className="flex items-center space-x-1">

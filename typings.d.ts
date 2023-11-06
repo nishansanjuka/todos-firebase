@@ -1,9 +1,9 @@
+
 type todo = {
-    id?:any
     todo:string
-    createdAt:string
+    createdAt:any
     finished:boolean
-    finishedAt:string
+    finishedAt:any
 }
 type TodoResponse = {
     status:number
@@ -12,4 +12,10 @@ type TodoResponse = {
 
 type UserData = {
     user:User
-  }
+}
+
+type todoItem = {
+    id:string,
+    todo:todo
+    updates?:todo
+}

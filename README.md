@@ -72,7 +72,7 @@ This command will start the Next.js development server, and your project will be
 These steps will guide you from cloning the repository to running your Next.js project with Firebase authentication. Make sure to replace placeholder values with your actual project-specific information.
 
 
-**Step 7: Build the Application**
+**Build the Application**
 
 To build the Next.js application, run the following command
 
@@ -81,12 +81,25 @@ npm run build
 ```
 This command will create a production-ready build of your application.
 
-**Step 8: Start the Production Server**
+**Start the Production Server**
 
 ```bash
 npm start
 ```
 Your project will be available at http://localhost:3000 in a production environment.
+
+## If you want litle more secure way, add fabase rules
+
+```yml
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /todos/{userId}/{document=**} {
+      allow read, write: if request.auth.uid == userId;
+    }
+  }
+}
+```
 
 # Dependencies.
 

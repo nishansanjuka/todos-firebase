@@ -88,13 +88,14 @@ npm start
 ```
 Your project will be available at http://localhost:3000 in a production environment.
 
-## If you want litle more secure way, add fabase rules
+## Firebase Security Rules
+**If you want litle more secure way, add firebase security rules**
 
 ```yml
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    match /todos/{userId}/{document=**} {
+    match /{userId}/{document=**} {
       allow read, write: if request.auth.uid == userId;
     }
   }
